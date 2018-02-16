@@ -1,7 +1,7 @@
 /**
  * @package:	org.jongula.ecad.signal
  * @file:		Signal.java
- * @brief:      Base container class for electric signal data.
+ * @brief:      Testing class for electric signal data.
  * 
  * @copyright:	Copyright (C) 2018 Kuhrman Technology Solutions LLC
  * @license:	GPLv3+: GNU GPL version 3
@@ -21,21 +21,23 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.jongula.ecad.signal;
+package org.jongula.ecad.internal.test.signal;
 
-public class Signal {
-	/**
-	 * Current in Amps.
-	 * @return double
+import org.jongula.ecad.signal.ISignal;
+
+public class TestSignal implements ISignal {
+	/* (non-Javadoc)
+	 * @see org.jongula.ecad.signal.ISignal#getCurrent()
 	 */
+	@Override
 	public double getCurrent() {
 		return 0.00088;
 	}
 	
-	/**
-	 * Potential in Volts.
-	 * @return double
+	/* (non-Javadoc)
+	 * @see org.jongula.ecad.signal.ISignal#getPotential()
 	 */
+	@Override
 	public double getPotential() {
 		return 5.00;
 	}
